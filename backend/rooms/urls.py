@@ -4,7 +4,7 @@ from .views import RoomViewSet, ReservationViewSet
 
 router = DefaultRouter()
 router.register(r'rooms', RoomViewSet)
-router.register(r'reservations', ReservationViewSet)
+router.register(r'reservations', ReservationViewSet)  # ✅ now works after adding .queryset
 
 urlpatterns = [
     path('', include(router.urls)),
